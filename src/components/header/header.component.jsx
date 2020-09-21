@@ -8,11 +8,11 @@ import "./header.styles.scss";
 const Header = () => (
     <div className='header'>
         <Link className='logo' to='/'>
-            Home
+            <span>Home</span>
         </Link>
-        <div className='icon'>
+        <Link className='logo' to='/basket'>
             <CartIcon />
-        </div>
+        </Link>
     </div>
 );
 
