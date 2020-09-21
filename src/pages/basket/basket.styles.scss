@@ -1,0 +1,25 @@
+.basket-page {
+    width: 55%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+
+    .basket-header {
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid darkgrey;
+
+        .header-block {
+            padding: 0 1rem;
+        }
+    }
+
+    button {
+        margin-left: auto;
+        margin-top: 5rem;
+    }
+}

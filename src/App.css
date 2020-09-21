@@ -1,0 +1,20 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body,
+#root {
+    direction: rtl;
+    height: 100vh;
+    margin: 0;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
