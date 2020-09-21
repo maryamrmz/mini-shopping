@@ -7,7 +7,6 @@ import CustomButton from "../../components/custom-button/custom-button.component
 
 import {
     selectCartItems,
-    selectCartTotal,
 } from "../../redux/cart/cart.selectors";
 
 import "./basket.styles.scss";
@@ -31,7 +30,6 @@ const BasketPage = ({ cartItems }) => (
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
-    total: selectCartTotal,
 });
 
 export default connect(mapStateToProps)(BasketPage);
