@@ -1,8 +1,16 @@
 .products {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(6rem, auto);
     grid-gap: 3rem;
     padding: 0 4rem;
+
+    @media screen and (max-width: 55rem) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 33rem) {
+        grid-template-columns: 1fr;
+    }
 }
