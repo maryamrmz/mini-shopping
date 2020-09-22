@@ -1,0 +1,14 @@
+.logo-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .home-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
