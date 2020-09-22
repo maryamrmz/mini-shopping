@@ -17,11 +17,14 @@ const ProductItem = ({ id, showModal, imageUrl, name, price }) => {
     };
 
     return (
-        <div className={`${price} product-item`} onClick={() => openModal(id)}>
-            <img className='background-image' src={imageUrl} alt={name} />
-            <div className='content'>
-                <h1 className='title'>{name.toUpperCase()}</h1>
-            </div>
+        <div className='product-item' onClick={() => openModal(id)}>
+            <figure>
+                <img className='image' src={imageUrl} alt={name} />
+                <figcaption className='content'>
+                    <span className='name'>{name.toUpperCase()}</span>
+                    <span className='price'>{price.toUpperCase()}</span>
+                </figcaption>
+            </figure>
             {showModal && (
                 <Modal isOpen={true} onRequestClose={closeModal}>
                     <ProductModal />
