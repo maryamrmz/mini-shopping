@@ -4,6 +4,8 @@ import { fetchProduct } from "../../redux/modal/modal.actions";
 
 import Spinner from "../layout/Spinner";
 
+import {} from "./product-modal.styles.scss";
+
 const ProductModal = ({ id, modal: { showModal, details, loading } }) => {
     if (loading) return <Spinner />;
 
