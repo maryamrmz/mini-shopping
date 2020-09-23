@@ -6,8 +6,8 @@ import { fetchProduct } from "../../store/product/actions";
 
 import "./ProductItem.scss";
 
-const ProductItem = ({ id, fetchProduct, product }) => {
-    const { imageUrl, name, price } = product;
+const ProductItem = ({ id, fetchProduct, product, imageUrl }) => {
+    const { name, price } = product;
     return (
         <div className='product-item' onClick={() => fetchProduct(id)}>
             <figure>
