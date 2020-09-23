@@ -4,16 +4,17 @@ import { createStructuredSelector } from "reselect";
 
 import BasketItem from "../../components/BasketItem";
 import { selectCartItems } from "../../store/cart/selectors";
-import { clearItemsFromCart } from "../../store/cart/actions";
+import { clearItemsFromCart, SubmitCartList } from "../../store/cart/actions";
 import CustomButton from "../../components/CustomButton";
 
 import "./Basket.scss";
 
-const BasketPage = ({ cartItems, clearItems }) => {
+const BasketPage = ({ cartItems, clearItems, submitItems }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        clearItems(cartItems);
+        submitItems(cartItems);
+        // clearItems(cartItems);
     };
 
     return (
@@ -32,6 +33,7 @@ const BasketPage = ({ cartItems, clearItems }) => {
             )}
         </form>
     );
+
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -40,6 +42,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
     clearItems: (item) => dispatch(clearItemsFromCart(item)),
+    submitItems: () => dispatch(SubmitCartList())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketPage);

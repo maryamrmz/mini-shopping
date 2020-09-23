@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
+
+import "materialize-css/dist/css/materialize.min.css";
+import Materialize from "materialize-css/dist/js/materialize.min.js";
+
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Basket from "./pages/Basket";
 
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
 import "./App.css";
 
-function App() {
+const App = () => {
     useEffect(() => {
         return () => {
             // Init Materialize JS
-            M.AutoInit();
+            Materialize.AutoInit();
         };
     }, []);
 
@@ -25,6 +27,6 @@ function App() {
             </Switch>
         </div>
     );
-}
+};
 
 export default App;
