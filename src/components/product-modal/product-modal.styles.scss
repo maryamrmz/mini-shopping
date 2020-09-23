@@ -2,37 +2,24 @@
     width: 100%;
     overflow: hidden;
     padding-bottom: 2.5rem;
-    border: 0.09rem solid lightgrey;
     padding: 0.2rem 0.4rem;
 
-    &:hover {
-        cursor: pointer;
-
-        & .image {
-            opacity: 0.9;
-        }
-    }
-
-    figure {
-        margin: 0;
+    &__header {
+        width: 100%;
+        padding: 1rem 0;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid darkgrey;
     }
 
     .content {
         height: 10%;
-        margin-top: 2rem;
+        margin: 2rem 0;
+        padding: 1rem;
         font-size: 80%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-
-        .image {
-            width: 100%;
-            height: 90%;
-            background-size: cover;
-            background-position: center;
-        }
     }
 }

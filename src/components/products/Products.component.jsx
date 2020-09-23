@@ -57,14 +57,7 @@ const Products = ({
                 startingTop: "4%",
             }}
         >
-            {details && (
-                <ProductModal
-                    name={details.name}
-                    price={details.price}
-                    material={details.material}
-                    product={details.product}
-                />
-            )}
+            {details && <ProductModal />}
         </Modal>
     );
 };
