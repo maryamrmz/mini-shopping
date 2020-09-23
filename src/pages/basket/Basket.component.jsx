@@ -17,7 +17,7 @@ const BasketPage = ({ cartItems, clearItems }) => {
     };
 
     return (
-        <form className='basket-page'>
+        <form className='basket-page' onSubmit={handleSubmit}>
             <div className='basket-page__header'>
                 <span className='basket-page__header-block'>اسم</span>
                 <span className='basket-page__header-block'>قیمت</span>
@@ -28,9 +28,7 @@ const BasketPage = ({ cartItems, clearItems }) => {
             ))}
             {/* eslint-disable-next-line */}
             {cartItems != "" && (
-                <CustomButton type='submit' onClick={handleSubmit}>
-                    نهایی کردن سبد
-                </CustomButton>
+                <CustomButton type='submit'>نهایی کردن سبد</CustomButton>
             )}
         </form>
     );
