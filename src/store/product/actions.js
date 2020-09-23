@@ -1,8 +1,13 @@
 import { ProductActionTypes } from "./types";
 
+let latestController;
+
 export const fetchProduct = (productId) => async (dispatch) => {
-    const controller = new AbortController();
-    const signal = controller.signal;
+    if (latestController) {
+        latestController.abort();
+    }
+    latestController = new AbortController();
+    const { signal } = latestController;
 
     try {
         setLoading();
@@ -17,13 +22,18 @@ export const fetchProduct = (productId) => async (dispatch) => {
             type: ProductActionTypes.FETCH_PRODUCT_SUCCESS,
             payload: data,
         });
-        controller.abort();
     } catch (err) {
         dispatch({
             type: ProductActionTypes.FETCH_PRODUCT_ERROR,
             payload: err,
         });
     }
+};
+
+export const removeProductItem = () => {
+    return {
+        type: ProductActionTypes.REMOVE_PRODUCT,
+    };
 };
 
 // Set loading to true

@@ -4,7 +4,7 @@ import { createStructuredSelector } from "reselect";
 
 import BasketItem from "../../components/BasketItem";
 import { selectCartItems } from "../../store/cart/selectors";
-import { clearItemsFromCart, SubmitCartList } from "../../store/cart/actions";
+import { clearItemsFromCart, submitCartList } from "../../store/cart/actions";
 import CustomButton from "../../components/CustomButton";
 
 import "./Basket.scss";
@@ -14,7 +14,7 @@ const BasketPage = ({ cartItems, clearItems, submitItems }) => {
         event.preventDefault();
 
         submitItems(cartItems);
-        // clearItems(cartItems);
+        clearItems(cartItems);
     };
 
     return (
@@ -42,7 +42,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
     clearItems: (item) => dispatch(clearItemsFromCart(item)),
-    submitItems: () => dispatch(SubmitCartList())
+    submitItems: () => dispatch(submitCartList())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BasketPage);

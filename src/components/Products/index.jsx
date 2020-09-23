@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Button, Modal } from "react-materialize";
 
 import { fetchProducts } from "../../store/products/actions";
+import { removeProductItem } from "../../store/product/actions";
 import ProductModal from "../ProductModal";
 import ProductItem from "../ProductItem";
 import Spinner from "../Spinner";
@@ -12,6 +13,7 @@ import "./Products.scss";
 const Products = ({
     products: { products, loading },
     fetchProducts,
+    removeProductItem,
     productItem: { details },
 }) => {
     useEffect(() => {
@@ -24,7 +26,7 @@ const Products = ({
     return (
         <Modal
             actions={[
-                <Button flat modal='close' node='button' waves='light'>
+                <Button flat modal='close' node='button' waves='light' onClick={removeProductItem}>
                     بستن
                 </Button>,
             ]}
@@ -67,4 +69,9 @@ const mapStateToProps = (state) => ({
     productItem: state.productItem,
 });
 
-export default connect(mapStateToProps, { fetchProducts })(Products);
+const mapDispatchToProps = (dispatch) => ({
+    removeProductItem: () => dispatch(removeProductItem()),
+    fetchProducts: () => dispatch(fetchProducts())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Products);

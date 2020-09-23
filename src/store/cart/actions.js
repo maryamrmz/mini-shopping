@@ -10,13 +10,13 @@ export const clearItemsFromCart = (item) => ({
     payload: item,
 });
 
-export const SubmitCartList = (formData) => async (dispatch) => {
+export const submitCartList = (cartItems) => async (dispatch) => {
     const settings = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: cartItems,
     };
     try {
         const fetchResponse = await fetch(

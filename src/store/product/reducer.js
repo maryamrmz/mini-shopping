@@ -24,6 +24,11 @@ const productReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 error: action.payload,
             };
+        case ProductActionTypes.REMOVE_PRODUCT:
+            return {
+                ...state,
+                details: null,
+            };
         default:
             return state;
     }
