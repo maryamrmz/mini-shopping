@@ -2,7 +2,6 @@ import { ProductActionTypes } from "./modal.types";
 
 const INITIAL_STATE = {
     details: null,
-    showModal: null,
     loading: false,
     error: null,
 };

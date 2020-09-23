@@ -4,13 +4,17 @@ import { fetchProducts } from "../../redux/products/products.actions";
 import ProductModal from "../product-modal/product-modal.component";
 import ProductItem from "../product-item/product-item.component";
 
-import Spinner from "../layout/Spinner";
+import Spinner from "../spinner/Spinner";
 
 import { Button, Modal } from "react-materialize";
 
 import "./products.styles.scss";
 
-const Products = ({ product: { products, loading }, fetchProducts }) => {
+const Products = ({
+    products: { products, loading },
+    fetchProducts,
+    product: { details },
+}) => {
     useEffect(() => {
         fetchProducts();
         // eslint-disable-next-line
@@ -27,11 +31,12 @@ const Products = ({ product: { products, loading }, fetchProducts }) => {
             ]}
             trigger={
                 <div className='products'>
-                    {products.map((item) => (
+                    {products.map((product) => (
                         <ProductItem
-                            key={item.id}
-                            imageUrl={`https://loremflickr.com/320/240?random=${item.id}`}
-                            item={item}
+                            id={product.id}
+                            key={product.id}
+                            imageUrl={`https://loremflickr.com/320/240?random=${product.id}`}
+                            product={product}
                         />
                     ))}
                 </div>
@@ -53,15 +58,14 @@ const Products = ({ product: { products, loading }, fetchProducts }) => {
                 startingTop: "4%",
             }}
         >
-            {products.map((item) => (
-                <ProductModal id={item.id} />
-            ))}
-        </Modal>
+            {details && <ProductModal name={details.name} price={details.price} material={details.material} product={details.product} />}
+        </Modal >
     );
 };
 
 const mapStateToProps = (state) => ({
-    product: state.products,
+    products: state.products,
+    product: state.product,
 });
 
 export default connect(mapStateToProps, { fetchProducts })(Products);

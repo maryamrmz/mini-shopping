@@ -1,13 +1,14 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { fetchProduct } from "../../redux/modal/modal.actions";
 
 import "./product-item.styles.scss";
 
-const ProductItem = ({ item }) => {
-    const { imageUrl, name, price } = item;
+const ProductItem = ({ id, fetchProduct, product }) => {
+    const { imageUrl, name, price } = product;
     return (
-        <div className='product-item'>
+        <div className='product-item' onClick={() => fetchProduct(id)}>
             <figure>
                 <img className='image' src={imageUrl} alt={name} />
                 <figcaption className='content'>
@@ -23,4 +24,10 @@ const mapStateToProps = (state) => ({
     showModal: state.product.showModal,
 });
 
-export default withRouter(connect(mapStateToProps)(ProductItem));
+const mapDispatchToProps = (dispatch) => ({
+    fetchProduct: (id) => dispatch(fetchProduct(id)),
+});
+
+export default withRouter(
+    connect(mapStateToProps, mapDispatchToProps)(ProductItem)
+);

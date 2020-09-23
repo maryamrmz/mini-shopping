@@ -1,21 +1,28 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchProduct } from "../../redux/modal/modal.actions";
+import { addItem } from "../../redux/cart/cart.actions";
 
-import Spinner from "../layout/Spinner";
+import CustomeButton from "../custom-button/custom-button.component";
 
-import {} from "./product-modal.styles.scss";
+import "./product-modal.styles.scss";
 
-const ProductModal = ({
-    id,
-    modal: { showModal, details, loading },
-    fetchProduct,
-}) => {
-    if (loading) return <Spinner />;
-
+const ProductModal = ({ name, price, product, material }) => {
     return (
-        <div>
-            <p>{id}</p>
+        <div className='product-modal'>
+            <figure>
+                <figcaption className='content'>
+                    <span className='content--name'>{name}</span>
+                    <span className='content--price'>{price}</span>
+                    <span className='content--product'>{product}</span>
+                    <span className='content--product-material'>
+                        {material}
+                    </span>
+                </figcaption>
+            </figure>
+            {/* <CustomeButton onClick={() => addItem(details)}>
+                &#10005;
+            </CustomeButton> */}
         </div>
     );
 };
@@ -24,4 +31,9 @@ const mapStateToProps = (state) => ({
     modal: state.product,
 });
 
-export default connect(mapStateToProps, { fetchProduct })(ProductModal);
+const mapDispatchToProps = (dispatch) => ({
+    fetchProduct: (id) => dispatch(fetchProduct(id)),
+    addItem: (item) => dispatch(addItem(item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductModal);

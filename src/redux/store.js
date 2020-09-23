@@ -8,10 +8,6 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 const middlewares = [thunk];
 
-if (process.env.NODE_ENV === "development") {
-    middlewares.push(thunk);
-}
-
 export const store = createStore(
     rootReducer,
     composeWithDevTools(applyMiddleware(...middlewares))
