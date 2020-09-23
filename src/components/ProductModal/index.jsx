@@ -18,7 +18,7 @@ const ProductModal = ({ productItem: { details, loading }, addItem }) => {
             <div className='product-modal__header'>
                 <span className='basket-page__header-block'>اسم</span>
                 <span className='basket-page__header-block'>قیمت</span>
-                <span className='basket-page__header-block'>محصول</span>
+                <span className='basket-page__header-block'>دسته‌بندی</span>
             </div>
             <div className='content'>
                 <span className='content__name'>{name}</span>
