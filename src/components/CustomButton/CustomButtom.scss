@@ -1,7 +1,7 @@
 .custom-button {
     width: 100%;
-    height: 5rem;
-    line-height: 5rem;
+    height: 4rem;
+    line-height: 3.5rem;
     background-color: black;
     color: white;
     text-transform: uppercase;
@@ -10,12 +10,14 @@
     border: none;
     cursor: pointer;
     margin-top: 2rem;
+    opacity: 0.5;
     display: flex;
     justify-content: center;
 
     &:hover {
         background-color: white;
         color: black;
+        opacity: 1;
         border: 0.09rem solid lightgray;
     }
 }
