@@ -24,15 +24,15 @@ export const submitCartList = (cartItems) => async (dispatch) => {
             settings
         );
         const data = await fetchResponse.json();
-        console.log(data);
 
+        console.log(data);
         dispatch({
-            type: CartActionTypes.SUBMIT_ITEMS,
+            type: CartActionTypes.SUBMIT_ITEMS_SUCCESS,
             payload: data,
         });
     } catch (err) {
         dispatch({
-            type: CartActionTypes.SUBMIT_ITEMS,
+            type: CartActionTypes.SUBMIT_ITEMS_ERROR,
             payload: err,
         });
     }
