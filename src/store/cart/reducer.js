@@ -1,4 +1,4 @@
-import CartActionTypes from "./cart.types";
+import CartActionTypes from "./types";
 import { addItemToCart } from "./utils";
 
 const INITIAL_STATE = {

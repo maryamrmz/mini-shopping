@@ -1,4 +1,4 @@
-import { ProductActionTypes } from "./product.types";
+import { ProductActionTypes } from "./types";
 
 export const fetchProduct = (productId) => async (dispatch) => {
     try {
@@ -10,12 +10,12 @@ export const fetchProduct = (productId) => async (dispatch) => {
         const data = await res.json();
 
         dispatch({
-            type: ProductActionTypes.FETCH_PRODUCT,
+            type: ProductActionTypes.FETCH_PRODUCT_SUCCESS,
             payload: data,
         });
     } catch (err) {
         dispatch({
-            type: ProductActionTypes.FETCH_ERROR,
+            type: ProductActionTypes.FETCH_PRODUCT_ERROR,
             payload: err,
         });
     }
@@ -24,6 +24,6 @@ export const fetchProduct = (productId) => async (dispatch) => {
 // Set loading to true
 export const setLoading = () => {
     return {
-        type: ProductActionTypes.SET_LOADING,
+        type: ProductActionTypes.FETCH_PRODUCT_LOADING,
     };
 };

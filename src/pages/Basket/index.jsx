@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import BasketItem from "../../components/basket-item/BasketItem.component";
-import { selectCartItems } from "../../store/cart/cart.selectors";
-import { clearItemsFromCart } from "../../store/cart/cart.actions";
-import CustomButton from "../../components/custom-button/CustomButton.component";
+import BasketItem from "../../components/BasketItem";
+import { selectCartItems } from "../../store/cart/selectors";
+import { clearItemsFromCart } from "../../store/cart/actions";
+import CustomButton from "../../components/CustomButton";
 
-import "./basket.styles.scss";
+import "./Basket.scss";
 
 const BasketPage = ({ cartItems, clearItems }) => {
     const handleSubmit = (event) => {

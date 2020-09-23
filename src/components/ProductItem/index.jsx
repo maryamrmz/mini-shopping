@@ -2,9 +2,9 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { fetchProduct } from "../../store/product/product.actions";
+import { fetchProduct } from "../../store/product/actions";
 
-import "./product-item.styles.scss";
+import "./ProductItem.scss";
 
 const ProductItem = ({ id, fetchProduct, product }) => {
     const { imageUrl, name, price } = product;

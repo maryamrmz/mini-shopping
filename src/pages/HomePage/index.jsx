@@ -1,8 +1,8 @@
 import React from "react";
 
-import Products from "../../components/products/Products.component";
+import Products from "../../components/Products/index";
 
-import "./homepage.styles.scss";
+import "./HomePage.scss";
 
 const HomePage = () => (
     <div className='homepage'>

@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Button, Modal } from "react-materialize";
 
-import { fetchProducts } from "../../store/products/products.actions";
-import ProductModal from "../product-modal/ProductModal.component";
-import ProductItem from "../product-item/ProductItem.component";
-import Spinner from "../spinner/Spinner";
+import { fetchProducts } from "../../store/products/actions";
+import ProductModal from "../ProductModal";
+import ProductItem from "../ProductItem";
+import Spinner from "../Spinner";
 
-import "./products.styles.scss";
+import "./Products.scss";
 
 const Products = ({
     products: { products, loading },

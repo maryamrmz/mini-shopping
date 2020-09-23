@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { fetchProduct } from "../../store/product/product.actions";
-import { addItem } from "../../store/cart/cart.actions";
-import CustomButton from "../custom-button/CustomButton.component";
-import Spinner from "../spinner/Spinner";
+import { fetchProduct } from "../../store/product/actions";
+import { addItem } from "../../store/cart/actions";
+import CustomButton from "../CustomButton";
+import Spinner from "../Spinner";
 
-import "./product-modal.styles.scss";
+import "./ProductModal.scss";
 
 const ProductModal = ({ productItem: { details, loading }, addItem }) => {
     const { name, price, product } = details;

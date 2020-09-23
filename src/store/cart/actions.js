@@ -1,4 +1,4 @@
-import CartActionTypes from "./cart.types";
+import CartActionTypes from "./types";
 
 export const addItem = (item) => ({
     type: CartActionTypes.ADD_ITEM,

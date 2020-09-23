@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { selectCartItemsCount } from "../../store/cart/cart.selectors";
+import { selectCartItemsCount } from "../../store/cart/selectors";
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 
-import "./cart-icon.styles.scss";
+import "./CartIcon.scss";
 
 const CartIcon = ({ itemCount }) => (
     <div className='cart-icon'>

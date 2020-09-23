@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./basket-item.styles.scss";
+import "./BasketItem.scss";
 
 const BasketItem = ({ cartItem }) => {
     const { name, price, quantity } = cartItem;
