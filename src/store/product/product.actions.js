@@ -1,4 +1,4 @@
-import { ProductActionTypes } from "./modal.types";
+import { ProductActionTypes } from "./product.types";
 
 export const fetchProduct = (productId) => async (dispatch) => {
     try {

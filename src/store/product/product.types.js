@@ -1,6 +1,5 @@
 export const ProductActionTypes = {
     FETCH_PRODUCT: "FETCH_PRODUCT",
-    SHOW_MODAL: "SHOW_MODAL",
     SET_LOADING: "SET_LOADING",
     FETCH_ERROR: "FETCH_ERROR",
 };

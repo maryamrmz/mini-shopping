@@ -1,4 +1,4 @@
-import { ProductActionTypes } from "./modal.types";
+import { ProductActionTypes } from "./product.types";
 
 const INITIAL_STATE = {
     details: null,
