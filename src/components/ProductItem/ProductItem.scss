@@ -17,6 +17,10 @@
         margin: 0;
         display: flex;
         flex-direction: column;
+
+        img {
+            margin: 0 auto;
+        }
     }
 
     .content {

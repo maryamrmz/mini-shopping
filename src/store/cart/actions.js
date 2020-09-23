@@ -25,7 +25,7 @@ export const submitCartList = (cartItems) => async (dispatch) => {
         );
         const data = await fetchResponse.json();
 
-        console.log(data);
+        alert("سفارش شما ثبت شد.");
         dispatch({
             type: CartActionTypes.SUBMIT_ITEMS_SUCCESS,
             payload: data,

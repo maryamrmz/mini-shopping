@@ -49,7 +49,7 @@ const Products = ({
                 dismissible: true,
                 endingTop: "10%",
                 inDuration: 250,
-                onCloseEnd: null,
+                onCloseEnd: removeProductItem,
                 onCloseStart: null,
                 onOpenEnd: null,
                 onOpenStart: null,

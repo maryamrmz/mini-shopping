@@ -9,7 +9,7 @@ import "./Header.scss";
 const Header = () => (
     <header className='header'>
         <Link className='header__logo' to='/'>
-            <div className='header__logo-icon'>
+            <div className='header__logo'>
                 <RootIcon className='home-icon' />
             </div>
         </Link>
