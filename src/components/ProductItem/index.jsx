@@ -13,7 +13,7 @@ const ProductItem = ({ id, fetchProduct, product }) => {
             <figure>
                 <img className='image' src={imageUrl} alt={name} />
                 <figcaption className='content'>
-                    <span className='content__name'>{name.toUpperCase()}</span>
+                    <span className='content__name'>{name}</span>
                     <span className='content__price'>{price}</span>
                 </figcaption>
             </figure>
