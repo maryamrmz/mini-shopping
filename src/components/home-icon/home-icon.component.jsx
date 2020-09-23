@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ReactComponent as RootIcon } from "../../assets/root.svg";
 
 import "./home-icon.styles.scss";

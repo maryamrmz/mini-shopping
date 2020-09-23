@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import { fetchProduct } from "../../redux/modal/modal.actions";
 import { addItem } from "../../redux/cart/cart.actions";
-
 import CustomeButton from "../custom-button/custom-button.component";
 
 import "./product-modal.styles.scss";
@@ -12,10 +12,10 @@ const ProductModal = ({ name, price, product, material }) => {
         <div className='product-modal'>
             <figure>
                 <figcaption className='content'>
-                    <span className='content--name'>{name}</span>
-                    <span className='content--price'>{price}</span>
-                    <span className='content--product'>{product}</span>
-                    <span className='content--product-material'>
+                    <span className='content__name'>{name}</span>
+                    <span className='content__price'>{price}</span>
+                    <span className='content__product'>{product}</span>
+                    <span className='content__product-material'>
                         {material}
                     </span>
                 </figcaption>

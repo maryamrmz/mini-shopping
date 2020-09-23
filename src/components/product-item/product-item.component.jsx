@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+
 import { fetchProduct } from "../../redux/modal/modal.actions";
 
 import "./product-item.styles.scss";
@@ -12,8 +13,8 @@ const ProductItem = ({ id, fetchProduct, product }) => {
             <figure>
                 <img className='image' src={imageUrl} alt={name} />
                 <figcaption className='content'>
-                    <span className='name'>{name.toUpperCase()}</span>
-                    <span className='price'>{price}</span>
+                    <span className='content__name'>{name.toUpperCase()}</span>
+                    <span className='content__price'>{price}</span>
                 </figcaption>
             </figure>
         </div>

@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { Button, Modal } from "react-materialize";
+
 import { fetchProducts } from "../../redux/products/products.actions";
 import ProductModal from "../product-modal/product-modal.component";
 import ProductItem from "../product-item/product-item.component";
-
 import Spinner from "../spinner/Spinner";
-
-import { Button, Modal } from "react-materialize";
 
 import "./products.styles.scss";
 
@@ -58,8 +57,15 @@ const Products = ({
                 startingTop: "4%",
             }}
         >
-            {details && <ProductModal name={details.name} price={details.price} material={details.material} product={details.product} />}
-        </Modal >
+            {details && (
+                <ProductModal
+                    name={details.name}
+                    price={details.price}
+                    material={details.material}
+                    product={details.product}
+                />
+            )}
+        </Modal>
     );
 };
 

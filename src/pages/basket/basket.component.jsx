@@ -12,8 +12,8 @@ const BasketPage = ({ cartItems }) => {
     return (
         <form className='basket-page'>
             <div className='basket-page__header'>
-                <span className='basket-page__header--block'>اسم</span>
-                <span className='basket-page__header--block'>قیمت</span>
+                <span className='basket-page__header-block'>اسم</span>
+                <span className='basket-page__header-block'>قیمت</span>
             </div>
             {cartItems.map((cartItem) => (
                 <BasketItem key={cartItem.id} cartItem={cartItem} />

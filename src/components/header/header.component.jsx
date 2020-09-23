@@ -7,14 +7,14 @@ import HomeIcon from "../home-icon/home-icon.component";
 import "./header.styles.scss";
 
 const Header = () => (
-    <div className='header'>
-        <Link className='logo' to='/'>
+    <header className='header'>
+        <Link className='header__logo' to='/'>
             <HomeIcon />
         </Link>
-        <Link className='logo' to='/basket'>
+        <Link className='header__icon' to='/basket'>
             <CartIcon />
         </Link>
-    </div>
+    </header>
 );
 
 export default Header;
