@@ -7,9 +7,9 @@ const BasketItem = ({ cartItem }) => {
 
     return (
         <div className='basket-item'>
-            <span className='name'>{name}</span>
-            <span className='price'>{price}</span>
-            <span className='quantity'>{quantity}</span>
+            <span className='basket-item__name'>{name}</span>
+            <span className='basket-item__price'>{price}</span>
+            <span className='basket-item__quantity'>{quantity}</span>
         </div>
     );
 };
