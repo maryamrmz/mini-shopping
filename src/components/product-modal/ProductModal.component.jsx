@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { fetchProduct } from "../../redux/modal/modal.actions";
-import { addItem } from "../../redux/cart/cart.actions";
-import CustomeButton from "../custom-button/custom-button.component";
+import { fetchProduct } from "../../store/modal/modal.actions";
+import { addItem } from "../../store/cart/cart.actions";
+import CustomeButton from "../custom-button/CustomButton.component";
 
 import "./product-modal.styles.scss";
 

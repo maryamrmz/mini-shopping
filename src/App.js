@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import Header from "./components/header/header.component";
-import HomePage from "./pages/homepage/homepage.component";
-import Basket from "./pages/basket/basket.component";
+import Header from "./components/header/Header.component";
+import HomePage from "./pages/homepage/Homepage.component";
+import Basket from "./pages/basket/Basket.component";
 
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
@@ -28,4 +28,3 @@ function App() {
 }
 
 export default App;
-

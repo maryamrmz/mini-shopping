@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Button, Modal } from "react-materialize";
 
-import { fetchProducts } from "../../redux/products/products.actions";
-import ProductModal from "../product-modal/product-modal.component";
-import ProductItem from "../product-item/product-item.component";
+import { fetchProducts } from "../../store/products/products.actions";
+import ProductModal from "../product-modal/ProductModal.component";
+import ProductItem from "../product-item/ProductItem.component";
 import Spinner from "../spinner/Spinner";
 
 import "./products.styles.scss";
@@ -12,7 +12,7 @@ import "./products.styles.scss";
 const Products = ({
     products: { products, loading },
     fetchProducts,
-    product: { details },
+    productItem: { details },
 }) => {
     useEffect(() => {
         fetchProducts();
@@ -71,7 +71,7 @@ const Products = ({
 
 const mapStateToProps = (state) => ({
     products: state.products,
-    product: state.product,
+    productItem: state.productItem,
 });
 
 export default connect(mapStateToProps, { fetchProducts })(Products);

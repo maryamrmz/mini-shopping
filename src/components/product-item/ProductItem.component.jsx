@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { fetchProduct } from "../../redux/modal/modal.actions";
+import { fetchProduct } from "../../store/modal/modal.actions";
 
 import "./product-item.styles.scss";
 
@@ -21,14 +21,10 @@ const ProductItem = ({ id, fetchProduct, product }) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    showModal: state.product.showModal,
-});
-
 const mapDispatchToProps = (dispatch) => ({
     fetchProduct: (id) => dispatch(fetchProduct(id)),
 });
 
 export default withRouter(
-    connect(mapStateToProps, mapDispatchToProps)(ProductItem)
+    connect(null, mapDispatchToProps)(ProductItem)
 );

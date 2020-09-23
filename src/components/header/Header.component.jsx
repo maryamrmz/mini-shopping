@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import CartIcon from "../cart-icon/cart-icon.component";
-import HomeIcon from "../home-icon/home-icon.component";
+import CartIcon from "../cart-icon/CartIcon.component";
+import HomeIcon from "../home-icon/HomeIcon.component";
 
 import "./header.styles.scss";
 

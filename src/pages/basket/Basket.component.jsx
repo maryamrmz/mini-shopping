@@ -2,9 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import BasketItem from "../../components/basket-item/basket-item.component";
-
-import { selectCartItems } from "../../redux/cart/cart.selectors";
+import BasketItem from "../../components/basket-item/BasketItem.component";
+import { selectCartItems } from "../../store/cart/cart.selectors";
 
 import "./basket.styles.scss";
 
